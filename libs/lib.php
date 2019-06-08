@@ -35,28 +35,22 @@ function listpress_get_post_detail($plugin="",$params)
 		$to=trim($params['to']);
 		?>
 		<input type="hidden" name="to" value="<?php echo $to; ?>">
+		
 		<?php
 	}
 	
-	if($plugin!="")
-	{
-		
 		?>
+
 		<input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
 		<input type="hidden" name="post_title" value="<?php echo $post_title; ?>">
 		<input type="hidden" name="plugin" value="<?php echo $plugin; ?>">
-		
-		
-		<?php
-	}
-	?>
-	
+			
 		<input type="hidden" name="thumbnail" value="<?php echo $thumbnail; ?>">
 		<input type="hidden" name="referrer_title" value="<?php echo esc_html( get_the_title() ); ?>">
-					 <input type="hidden" name="referrer_URL" value="<?php echo esc_url( get_permalink() ); ?>">
-					 <input type="hidden" name="action" value="contactform_action" />
-					 <?php echo wp_nonce_field('contactform_action', '_acf_nonce', true, false); ?>
-					 <input type="text" name="captcha" value="1" style="display:none !important" tabindex="-1" autocomplete="off">			 
+		<input type="hidden" name="referrer_URL" value="<?php echo esc_url( get_permalink() ); ?>">
+		<input type="hidden" name="action" value="contactform_action" />
+		<?php echo wp_nonce_field('contactform_action', '_acf_nonce', true, false); ?>
+		<input type="text" name="captcha" value="1" style="display:none !important" tabindex="-1" autocomplete="off">			 
 		
 		<?php
 			
@@ -172,7 +166,7 @@ echo $filelist;
 	
 	$count='<span class="update-plugins count-2"><span class="plugin-count">2</span></span>';
 	
-	add_submenu_page( null, 'ListPress Inbox', 'Inbox', 'manage_options', 'view-entry', 'listpress_inbox' );
+	add_submenu_page( null, 'ListPress Inbox', 'Inbox', 'read', 'view-entry', 'listpress_inbox' );
 	
 	add_submenu_page( 'edit.php?post_type=listpress', 'Form Editor', 'Form Layouts', 'manage_options', 'layout', 'listpress_layout_edit' );
 	
@@ -209,18 +203,20 @@ echo $filelist;
 	 $author_id = get_post_field ('post_author', $post_id);
 	$author_email = get_the_author_meta( 'user_email' , $author_id ); 
 	
-	
-	if($_POST['plugin']=="upg" && isset($options['listpress_upg_cc_enable']) && $options['listpress_upg_cc_enable']=="1" )
+	if(isset($_POST['plugin']))
 	{
-		$header.= "Bcc: ".$author_email.PHP_EOL;
-		//error_log('BCC upg email:'.$header);
+
+		if($_POST['plugin']=="upg" && isset($options['listpress_upg_cc_enable']) && $options['listpress_upg_cc_enable']=="1" )
+		{
+			$header.= "Bcc: ".$author_email.PHP_EOL;
+			//error_log('BCC upg email:'.$header);
+		}
+		if($_POST['plugin']=="woocommerce" && isset($options['listpress_woocommerce_cc_enable']) && $options['listpress_woocommerce_cc_enable']=="1" )
+		{
+			$header.= "Bcc: ".$author_email.PHP_EOL;
+			//error_log('BCC woocommerce email:'.$header);
+		}
 	}
-	if($_POST['plugin']=="woocommerce" && isset($options['listpress_woocommerce_cc_enable']) && $options['listpress_woocommerce_cc_enable']=="1" )
-	{
-		$header.= "Bcc: ".$author_email.PHP_EOL;
-		//error_log('BCC woocommerce email:'.$header);
-	}
-	
 	
 	
 	 

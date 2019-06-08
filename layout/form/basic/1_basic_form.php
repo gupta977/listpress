@@ -6,5 +6,3 @@
 					 
 <label for="message">Message</label>
 <textarea  cols="30" rows="5" name="message" id="message"  rows="2" tabindex="4" rows="2" required></textarea>
-
-test

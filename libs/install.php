@@ -50,8 +50,30 @@ function listpress_post_types()
 
 function listpress_install()
 {
-	
-	listpress_post_types();
+  $options = get_option('listpress_settings');
+  if(!isset($options['global_layout']))
+	{
+		$options['global_layout']='basic';
+		update_option( 'listpress_settings', $options );	
+  }
+  if(!isset($options['label']))
+	{
+		$options['label']='Contact Us';
+		update_option( 'listpress_settings', $options );	
+	}
+  if(!isset($options['title']))
+	{
+		$options['title']='Contact Form';
+		update_option( 'listpress_settings', $options );	
+  }
+  if(!isset($options['info']))
+	{
+		$options['info']='Full information';
+		update_option( 'listpress_settings', $options );	
+	}
+
+  listpress_post_types();
+  
     flush_rewrite_rules(); 
 }
 

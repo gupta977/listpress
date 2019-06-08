@@ -115,7 +115,7 @@ $options = get_option('listpress_settings');
 	Disable Email: <input type="checkbox" name='listpress_settings[email]' value='1' <?php if($email=='1') echo 'checked="checked"'; ?> >
 	</td></tr>
 	
-	<tr><td>From Email Address: </td><td><?php echo get_option('blogname'); ?> - <input type="email" name='listpress_settings[SE]' value='<?php echo $SE; ?>'  size="20" class="regular-text">
+	<tr><td>From Email Address: </td><td><input type="email" name='listpress_settings[SE]' value='<?php echo $SE; ?>'  size="20" class="regular-text"> for <?php echo get_option('blogname'); ?> 
 	</td></tr>
 	<tr><td>
 	Recipient's Email Address : </td><td>
