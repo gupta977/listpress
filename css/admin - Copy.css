@@ -1,0 +1,13 @@
+table.wp-list-table .column-thumbnail {
+    width: 52px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+table.wp-list-table .column-title {
+    width: 22%;
+}
+
+/*--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------*/

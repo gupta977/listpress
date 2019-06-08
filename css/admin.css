@@ -1,0 +1,35 @@
+table.wp-list-table .column-thumbnail {
+    width: 52px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+table.wp-list-table .column-title {
+    width: 20%;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 720px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 782px) {
+table.wp-list-table {
+    display: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+table.fixed{
+	table-layout: auto;
+}
+table.wp-list-table .column-thumbnail {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+}
+
+
+
+/*--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------*/
