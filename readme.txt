@@ -1,16 +1,16 @@
 === ListPress Contact ===
 
 Contributors: odude
-Tags: contact button, feedback, inquiry, reporting, inquiry, listpress, contact, quick contact
+Tags: contact button, feedback, inquiry, reporting, enquiry, listpress, contact, quick contact
 Donate Link: http://www.odude.com
 Requires at least: 3.8
-Tested up to: 4.9.5
+Tested up to: 5.2.2
 Requires PHP: 5.5
 Stable tag: trunk
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Dynamic popup contact button with inbox support.
+Dynamic popup contact button with dashboard inbox  for WooCommerce & other pages.
 
 
 == Description ==
@@ -42,20 +42,28 @@ The settings can also be overridden by using parameters in shortcode. This way e
 
 For further queries feel free to drop a line at <a href="mailto:navneet@odude.com">navneet@odude.com</a>. 
 
-== Installation ==
+== Frequently Asked Questions ==
 
-= Automatic Installation =
+= Installation =
 
-* Go to your plugin browser inside your wordpress installation and search `listpress` by keyword. Then choose ListPress and click install. It will be installed shortly.
 * Activate the plugin from `Plugins` menu after installation
 * Use [listpress] shortcode where ever you want to show the buttons. 
+* Save ListPress settings before use.
 
-= Manual Installation =
+= How to change form layouts? =
 
-* Download the latest version and extract the folder to the `/wp-content/plugins/` directory
-* The plugin will appear as inactive in your `Plugins` menu
-* Activate the plugin through the `Plugins` menu in WordPress
-* Use [listpress] shortcode where ever you want to show the buttons. 
+* You can either update layout from ListPress settings or by using shortcode.
+* Eg. [listpress layout="layout_name"]
+
+= How to add own fields? =
+* You should have html form knowledge. 
+* Use input tags to display fields of your choice. 
+* The information submitted by user will get saved as your input tag name
+
+= How to display buttons in WooCommerce Plugin ?
+* This button is builtin with ListPress
+* Go to ListPress settings, Plugins Tab
+* Enable it for WooCommerce and other plugins available. 
 
 
 ==  Screenshots ==
@@ -67,6 +75,10 @@ For further queries feel free to drop a line at <a href="mailto:navneet@odude.co
 
 
 == Changelog ==
+= 1.8 =
+* Full parameters into email
+* Users with edit capabilities can view inbox.
+
 = 1.7 =
 * Changed view of dashboard inbox
 

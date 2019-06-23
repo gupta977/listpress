@@ -225,8 +225,8 @@ echo $filelist;
 	 
 	 
 	 
-		//foreach ($_POST as $key => $value)
-		//$message .= "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>";
+		foreach ($_POST as $key => $value)
+		$message .= "Field ".htmlspecialchars($key)." = ".htmlspecialchars($value)."<br>";
 
 	 
 	 wp_mail($to, $subject, $message, $header);

@@ -1,6 +1,7 @@
 <?php
 
 add_action('init', 'listpress_post_types');
+add_action('init', 'listpress_install');
 add_shortcode("listpress", "listpress_button");
 add_action('wp_enqueue_scripts', 'listpress_enqueue_scripts');
 add_action('admin_enqueue_scripts', 'listpress_admin_enqueue_scripts');

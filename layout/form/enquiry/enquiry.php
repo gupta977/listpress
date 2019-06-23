@@ -35,7 +35,7 @@ $rand=rand();
   </div>
   <div class="listpress_column_65">
 			<?php
-			include(listpress_BASE_DIR."/layout/form/personal/".get_current_blog_id()."_personal_form.php");
+			include(listpress_BASE_DIR."/layout/form/enquiry/".get_current_blog_id()."_enquiry_form.php");
 			?>
 	</div>
 </div>		

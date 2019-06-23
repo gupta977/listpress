@@ -72,7 +72,7 @@ function listpress_install()
 		update_option( 'listpress_settings', $options );	
 	}
 
-  listpress_post_types();
+  //listpress_post_types();
   
     flush_rewrite_rules(); 
 }

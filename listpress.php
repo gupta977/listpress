@@ -1,16 +1,16 @@
 <?php
 /*
-Plugin Name: ListPress Contact
+Plugin Name: ListPress WooCommerce Contact
 Plugin URI: http://odude.com/
 Description: Dynamic popup contact button
-Version: 1.7
+Version: 1.8
 Author: ODude Network
 Author URI: http://odude.com/
 License: GPLv2 or later
 Text Domain: listpress
 */
 
-	define('listpress_PLUGIN_VERSION', '1.7');
+	define('listpress_PLUGIN_VERSION', '1.8');
 
 	define('listpress_ROOT_URL', plugin_dir_url( __FILE__ ) );
 	define('listpress_FOLDER',dirname(plugin_basename( __FILE__ )));

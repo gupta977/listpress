@@ -12,7 +12,7 @@ Form' and other as 'Report Spam' button.
 <hr><br>
 <b>Available Parameters</b>
 <ul>
-<li><b>layout</b>: You can make your own or select from available list. If you make your own form fields from 'layout editor', you need to keep layout value as 'personal'. <br>Eg.[listpress layout="personal"]</li>
+<li><b>layout</b>: You can make your own or select from available list. <br>Eg.[listpress layout="layout_name"]</li>
 <li><b>label</b>: Changes label of the contact button.</li>
 <li><b>title</b>: Changes title of the popup form.</li>
 <li><b>info</b>: Small description of the form below title.</li>

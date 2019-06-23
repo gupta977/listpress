@@ -51,7 +51,7 @@ if(isset($options['RE']))
 else
 {
 	echo "<h2>";
-	echo __('Save ListPress settings with required information.','listpress');
+	echo __('Update ListPress settings with required information.','listpress');
 	echo "</h2>";
 }
 $put=ob_get_clean (); 

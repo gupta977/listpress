@@ -96,7 +96,7 @@ for (var i=0, len=sz.length; i<len; i++) {
 	</td>
 	<td valign='top' style="background-color:#eeeeee ;">
 	<b>Tips / Tricks</b><hr>
-	You can create your own custom fields using simple HTML code. This form will update personal layout.<br>
+	You can create your own custom fields using simple HTML code. <br>
 	See documentation at <a href="https://www.w3schools.com/html/html_form_elements.asp" target="_blank">w3schools</a><hr>
 	
 	<b>Reserved name of input fields</b><br>
